@@ -1,0 +1,277 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+nav {
+  background: #1a1a2e;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-zk {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn,
+.nav-btnactivo {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover,
+.nav-btnactivo:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-btnactivo {
+  background: rgba(255,255,255,0.2);
+  border-color: #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section {
+  display: none;
+}
+
+.section-active {
+  display: block;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.card-title,
+.card-tittle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1a1a2e;
+}
+
+.card-subtitle,
+.card-subtittle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #1a1a2e;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #2d2d4e;
+}
+
+.info-box {
+  background: #eaf4ff;
+  border-left: 4px solid #3498db;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #1a5276;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.cifrado-demo {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.cifrado-demo-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.cifrado-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.cifrado-label {
+  color: #666;
+  min-width: 120px;
+}
+
+.cifrado-valueencriptado {
+  font-family: monospace;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #e74c3c;
+}
+
+.cred-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.cred-site {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cred-user {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.cred-encrypted {
+  font-family: monospace;
+  font-size: 11px;
+  color: #e74c3c;
+  background: #fff5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.cred-decrypted {
+  font-family: monospace;
+  font-size: 12px;
+  color: #27ae60;
+  background: #f0fff4;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+  display: none;
+}
+
+.server-box {
+  background: #1a1a2e;
+  color: #2ecc71;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1.8;
+  word-break: break-all;
+}
+
+.warning-box {
+  background: #fff8e1;
+  border-left: 4px solid #f39c12;
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #7d6608;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 12px;
+  display: none;
+}
+
+.error-msg {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 12px;
+  display: none;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bóveda ZK - Zero Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
@@ -14,7 +15,7 @@
     </div>
     <div class="nav-links">
         <button class="nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
-        <button class="nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
+        <button class="nav-btn" onclick="mostrarSeccion('agregar')">Agregar</button>
         <button class="nav-btn" onclick="mostrarSeccion('servidor')">Servidor</button>
         <button class="nav-btn" onclick="mostrarSeccion('recuperar')">Recuperar</button>
     </div>
@@ -74,8 +75,41 @@
     </div>
 
 <!--Sección 3 Lo que ve el servidor-->
+<div id="Seccin-servidor" class="section">
+    <div class="card">
+        <p class="card-title">Lo que guarde el servidor: </p>
+        <p class="card-subtittle">Estos son los datos reales que llegan al servidor. Sin la contraseña maestra, son ilegibles.</p>
 
+        <div id="servidor-datos">
+            <p>Aún no hay datos guardados. Agregá una credencial primero.</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>Esto demuestra el Zero-Knowledge: </strong> el servidor almacena únicamente texto cifrado. Incluso si un hacker accede a la base de datos, no puede leer tus contraseñas reales.
+        </div>
+    </div>
 </div>
 
+<!--sección 4 Recuperar credenciales-->
+<div id="seccion-recuperar" class="section">
+    <div class="card">
+        <p class="card-title">Recuperar credenciales</p>
+        <p class="card-subtittle">Ingresá tu contraseña maestra para descifrar tus credenciales. El descifrado ocurre aquí en tu navegador.</p>
+
+        <label>Contraseña maestra</label>
+        <input type="password" id="recu-password" placeholder="Tu contraseña maestra">
+
+        <button class="btn" onclick="decifrarCredenciales()">Descifrar bóveda</button>
+
+        <div class="error-msg" id="erro-recuperar">Contraseña incorrecta o no hay credenciales guardadas.</div>
+
+        <div id="lista-credenciales"></div>
+    </div>
+</div>
+</div>
+
+<script src="crypto.js"></script>
+<script src="app.js"></script>
+ 
 </body>
 </html>
