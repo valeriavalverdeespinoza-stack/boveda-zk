@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bóveda ZK - Zero Knowledge</title>
+</head>
+<body>
+    
+<nav>
+    <div class="nav-logo">
+        Bóveda ZK
+        <span class="badge-zk">Zero-Knowledge</span>
+    </div>
+    <div class="nav-links">
+        <button class="nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
+        <button class="nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
+        <button class="nav-btn" onclick="mostrarSeccion('servidor')">Servidor</button>
+        <button class="nav-btn" onclick="mostrarSeccion('recuperar')">Recuperar</button>
+    </div>
+</nav>
+
+<div class="container">
+    <!--Sección 1 Registro/ formulario-->
+    <div id="seccion-registro" class="section-active">
+        <div class="card">
+            <p class="card-tittle">Crear o desbloquear bóveda</p>
+            <p class="card-subtittle"> Tu contraseña maestra nunca se envía al servidor. Solo se usa aquí, en tu navegador, para crear la llave de cifrado.</p>
+
+            <div class="info-box">
+                <strong>¿Cómo funciona?</strong> A partir de tu contraseña maestra se genera una llave criptográfica usando <strong>PBKDF2</strong>. Esa llave cifra tus credenciales con <strong>AES-GCM</strong> antes de enviarlas.
+            </div>
+
+            <label>Nombre de usuario</label>
+            <input type="text" id="regis-usuario" placeholder="Ej: Usuario123">
+
+            <label> Contraseña maestra</label>
+            <input type="password" id="regis-password" placeholder="Mínimo 8 caracteres">
+
+            <button class="btn" onclick="registrar()">Crear bóveda / Desbloquear</button>
+
+            <div class="success-msg" id="msg-registro"> Bóveda desbloqueada. Llave generada en el navegador. </div>
+            <div class="error-msg" id="err-registro">Ingresá un usuario y contraseña.</div>
+        </div>
+    </div>
+
+    <!--Sección 2 Agregar credencial-->
+    <div id="seccion-agregar" class="section">
+        <div class="card">
+            <p class="card-tittle">Agregar credencial</p>
+            <p class="card-subtittle">Tu contraseña se cifra aquí en el navegador antes de enviarse. El servidor nunca ve el texto original.</p>
+
+            <label>Servicio</label>
+            <input type="text" id="add-servicio" placeholder="Instagram, Gmail..." oninput="actualizarDemo()">
+          
+            <label> Usuario o correo</label>
+            <input type="text" id="add-usuario" placeholder="Ej: example@gmail.com" oninput="actualizarDemo()">
+
+            <label>Contraseña del sitio</label>
+            <input type="password" id="add-password" placeholder="Contraseña a guardar" oninput="actualizarDemo()">
+
+            <div class="cifrado-demo">
+                <p class="cifrado-demo-title">Demostración del cifrado (Zero-Knowledge)</p>
+                <div class="cifrado-row">
+                    <span class="cifrado-label">Texto original: </span>
+                    <span class="cifrado-valueencriptado" id="demo-cifrado"></span>
+                </div>
+            </div>
+
+            <button class="btn" onclick="cifrarYGuardar()">Cifrar y guardar</button>
+            <div class="success-msg" id="msg-agregar"> Credencial cifrada y enviada al servidor </div>
+            <div class="error-msg" id="err-agregar">Completa todos los campos.</div>
+        </div>
+    </div>
+
+<!--Sección 3 Lo que ve el servidor-->
+
+</div>
+
+</body>
+</html>
