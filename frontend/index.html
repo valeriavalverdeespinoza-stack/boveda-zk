@@ -23,7 +23,7 @@
 
 <div class="container">
     <!--Sección 1 Registro/ formulario-->
-    <div id="seccion-registro" class="section-active">
+    <div id="seccion-registro" class="section active">
         <div class="card">
             <p class="card-tittle">Crear o desbloquear bóveda</p>
             <p class="card-subtittle"> Tu contraseña maestra nunca se envía al servidor. Solo se usa aquí, en tu navegador, para crear la llave de cifrado.</p>
@@ -60,13 +60,17 @@
             <label>Contraseña del sitio</label>
             <input type="password" id="add-password" placeholder="Contraseña a guardar" oninput="actualizarDemo()">
 
-            <div class="cifrado-demo">
-                <p class="cifrado-demo-title">Demostración del cifrado (Zero-Knowledge)</p>
-                <div class="cifrado-row">
-                    <span class="cifrado-label">Texto original: </span>
-                    <span class="cifrado-valueencriptado" id="demo-cifrado"></span>
-                </div>
-            </div>
+        <div class="cifrado-demo">
+            <p class="cifrado-demo-title">Demostración del cifrado (Zero-Knowledge)</p>
+            <div class="cifrado-row">
+            <span class="cifrado-label">Texto original: </span>
+            <span class="cifrado-value original" id="demo-original">Escribí algo arriba...</span>
+        </div>
+        <div class="cifrado-row">
+            <span class="cifrado-label">Lo que ve el servidor: </span>
+            <span class="cifrado-value encrypted" id="demo-cifrado">—</span>
+        </div>
+        </div>
 
             <button class="btn" onclick="cifrarYGuardar()">Cifrar y guardar</button>
             <div class="success-msg" id="msg-agregar"> Credencial cifrada y enviada al servidor </div>
@@ -75,7 +79,7 @@
     </div>
 
 <!--Sección 3 Lo que ve el servidor-->
-<div id="Seccin-servidor" class="section">
+<div id="seccion-servidor" class="section">
     <div class="card">
         <p class="card-title">Lo que guarde el servidor: </p>
         <p class="card-subtittle">Estos son los datos reales que llegan al servidor. Sin la contraseña maestra, son ilegibles.</p>

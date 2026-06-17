@@ -70,7 +70,7 @@ nav {
   display: none;
 }
 
-.section-active {
+.section.active {
   display: block;
 }
 
@@ -180,7 +180,7 @@ input:focus {
   min-width: 120px;
 }
 
-.cifrado-valueencriptado {
+.cifrado-value {
   font-family: monospace;
   font-size: 12px;
   background: #fff;
@@ -191,8 +191,10 @@ input:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #e74c3c;
 }
+
+.cifrado-value.original { color: #27ae60; }
+.cifrado-value.encrypted { color: #e74c3c; }
 
 .cred-item {
   border: 1px solid #eee;
