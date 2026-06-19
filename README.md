@@ -5,7 +5,7 @@
 ## Problema:
     - Las personas reutilizan contraseñas débiles en varios sitios, ya que les resulta difícil recordar muchas credenciales seguras, además desconfían de los gestores de contraseña porque creen que pueden ver o acceder a sus datos almacenados. 
 ## Nuestra Solución:
-    - La solucon es desarrollar una bóveda educativa de contraseñas s¿basada en el Conocimiento Cero (Zero-Knowledge), donde las contraseñas se cifran directamente en el navegador antes de enviarse al servidor.
+    - La solución es desarrollar una bóveda educativa de contraseñas s¿basada en el Conocimiento Cero (Zero-Knowledge), donde las contraseñas se cifran directamente en el navegador antes de enviarse al servidor.
 De esta forma: 
 • La contraseña maestra nunca sale del dispositivo del usuario.
 • Las credenciales se transforman en texto cifrado.
