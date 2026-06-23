@@ -15,7 +15,30 @@
     •  El sistema educa al usuario mostrando  cómo los datos legibles se convierten en texto cifrado antes de viajar por Internet.
 ## Diseño de la solución:
 
+[Usuario escribe contraseña]
+         ↓
+[Navegador cifra con Web Crypto API]  ← esto es el Conocimiento Cero
+         ↓
+[Solo los datos cifrados viajan al servidor]
+         ↓
+[Base de datos guarda datos ilegibles]
+         ↓
+[Ni el dueño del servidor puede leerlos]
+         ↓
+[Usuario quiere recuperar sus credenciales]
+         ↓
+[Navegador pide los datos cifrados al servidor]
+         ↓
+[Navegador descifra con la contraseña maestra]  ← otra vez el Conocimiento Cero
+         ↓
+[Usuario ve su contraseña real]
+
 ## Pruebas:
+
+Se realizaron pruebas para ver el funcionamiento del cifrado del Crypto.js desde la consola. 
+![prueba-funcionamiento crytpo](image.png)
+
+Primero se creó una contraseña maestra que generó una llave de seguridad en el navegador. Después, se guardó la contraseña y el sistema la convirtió en un texto cifrado imposible de leer a simple vista. Luego, al ingresar nuevamente la contraseña maestra correcta, se logró recuperar la contraseña original sin problemas. Finalmente, se intentó acceder utilizando una contraseña maestra incorrecta y el sistema mostró un error, impidiendo el acceso a la información.
 
 ## Consideraciones a pensar antes:
     Antes de desarrollar el proyecto tomamos en cuenta:
