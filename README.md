@@ -13,9 +13,10 @@
     • El servidor almacena únicamente datos cifrados, sin poder leer su contenido.
     • Aunque alguien acceda a la base de datos, no podrá conocer las contraseñas sin la clave maestra.
     •  El sistema educa al usuario mostrando  cómo los datos legibles se convierten en texto cifrado antes de viajar por Internet.
+
 ## Diseño de la solución:
 
-\`\`\`
+'''
 [Usuario escribe contraseña]
          ↓
 [Navegador cifra con Web Crypto API]  ← esto es el "Conocimiento Cero"
@@ -35,10 +36,9 @@
 [Navegador descifra con la contraseña maestra]  ← otra vez Conocimiento Cero
          ↓
 [Usuario ve su contraseña real]
-\`\`\`
+'''
 
 ## Pruebas:
-
 Se realizaron pruebas para ver el funcionamiento del cifrado del Crypto.js desde la consola. 
 ![prueba-funcionamiento crytpo](image.png)
 
