@@ -16,27 +16,7 @@
 
 ## Diseño de la solución:
 
-'''
-[Usuario escribe contraseña]
-         ↓
-[Navegador cifra con Web Crypto API]  ← esto es el "Conocimiento Cero"
-         ↓
-[Solo datos cifrados viajan al servidor]
-         ↓
-[Base de datos guarda datos ilegibles]
-         ↓
-[Ni el dueño del servidor puede leerlos]
-         ↓
-   (tiempo después)
-         ↓
-[Usuario quiere recuperar sus credenciales]
-         ↓
-[Navegador pide los datos cifrados al servidor]
-         ↓
-[Navegador descifra con la contraseña maestra]  ← otra vez Conocimiento Cero
-         ↓
-[Usuario ve su contraseña real]
-'''
+![Diagrama de flujo Zero-Knowledge](diagrama-flujo.png)
 
 ## Pruebas:
 Se realizaron pruebas para ver el funcionamiento del cifrado del Crypto.js desde la consola. 
