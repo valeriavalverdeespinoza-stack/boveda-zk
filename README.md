@@ -15,23 +15,27 @@
     •  El sistema educa al usuario mostrando  cómo los datos legibles se convierten en texto cifrado antes de viajar por Internet.
 ## Diseño de la solución:
 
+\`\`\`
 [Usuario escribe contraseña]
          ↓
-[Navegador cifra con Web Crypto API]  ← esto es el Conocimiento Cero
+[Navegador cifra con Web Crypto API]  ← esto es el "Conocimiento Cero"
          ↓
-[Solo los datos cifrados viajan al servidor]
+[Solo datos cifrados viajan al servidor]
          ↓
 [Base de datos guarda datos ilegibles]
          ↓
 [Ni el dueño del servidor puede leerlos]
          ↓
+   (tiempo después)
+         ↓
 [Usuario quiere recuperar sus credenciales]
          ↓
 [Navegador pide los datos cifrados al servidor]
          ↓
-[Navegador descifra con la contraseña maestra]  ← otra vez el Conocimiento Cero
+[Navegador descifra con la contraseña maestra]  ← otra vez Conocimiento Cero
          ↓
 [Usuario ve su contraseña real]
+\`\`\`
 
 ## Pruebas:
 
