@@ -16,7 +16,7 @@
 
 ## Diseño de la solución:
 
-![Diagrama de flujo Zero-Knowledge](diagrama-flujo.png)
+![Diagrama de flujo Zero-Knowledge](diagrama_flujo_zero_knowledge.png)
 
 ## Pruebas:
 Se realizaron pruebas para ver el funcionamiento del cifrado del Crypto.js desde la consola. 
