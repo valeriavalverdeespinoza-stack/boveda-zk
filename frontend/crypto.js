@@ -91,6 +91,5 @@ async function descifrarTexto(textoCifradoBase64, passwordMaestra) {
 
 function simularCifrado(texto) {
   if (!texto) return "—";
-  // Simulación visual usando btoa
   return btoa(texto + Math.random().toString(36)).substring(0, 40) + "...";
 }

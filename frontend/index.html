@@ -14,10 +14,10 @@
         <span class="badge-zk">Zero-Knowledge</span>
     </div>
     <div class="nav-links">
-        <button class="nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
-        <button class="nav-btn" onclick="mostrarSeccion('agregar')">Agregar</button>
-        <button class="nav-btn" onclick="mostrarSeccion('servidor')">Servidor</button>
-        <button class="nav-btn" onclick="mostrarSeccion('recuperar')">Recuperar</button>
+        <button type="button" class="nav-btn nav-btnactivo" onclick="mostrarSeccion('registro')">Registro</button>
+        <button type="button" class="nav-btn" onclick="mostrarSeccion('agregar')">Agregar</button>
+        <button type="button" class="nav-btn" onclick="mostrarSeccion('servidor')">Servidor</button>
+        <button type="button" class="nav-btn" onclick="mostrarSeccion('recuperar')">Recuperar</button>
     </div>
 </nav>
 
@@ -38,7 +38,7 @@
             <label> Contraseña maestra</label>
             <input type="password" id="regis-password" placeholder="Mínimo 8 caracteres">
 
-            <button class="btn" onclick="registrar()">Crear bóveda / Desbloquear</button>
+            <button type="button" class="btn" onclick="registrar()">Crear bóveda / Desbloquear</button>
 
             <div class="success-msg" id="msg-registro"> Bóveda desbloqueada. Llave generada en el navegador. </div>
             <div class="error-msg" id="err-registro">Ingresá un usuario y contraseña.</div>
@@ -72,7 +72,7 @@
         </div>
         </div>
 
-            <button class="btn" onclick="cifrarYGuardar()">Cifrar y guardar</button>
+            <button type="button" class="btn" onclick="cifrarYGuardar()">Cifrar y guardar</button>
             <div class="success-msg" id="msg-agregar"> Credencial cifrada y enviada al servidor </div>
             <div class="error-msg" id="err-agregar">Completa todos los campos.</div>
         </div>
@@ -103,7 +103,7 @@
         <label>Contraseña maestra</label>
         <input type="password" id="recu-password" placeholder="Tu contraseña maestra">
 
-        <button class="btn" onclick="decifrarCredenciales()">Descifrar bóveda</button>
+        <button type="button" class="btn" onclick="decifrarCredenciales()">Descifrar bóveda</button>
 
         <div class="error-msg" id="erro-recuperar">Contraseña incorrecta o no hay credenciales guardadas.</div>
 
