@@ -56,4 +56,19 @@ Almacenamiento: Base de datos que guarde la información cifrada.
     4.	cifrarYGuardar: Cifra el usuario y la contraseña antes de enviarlos al servidor para su almacenamiento.
     5.	cargarDatosServidor: Obtiene las credenciales almacenadas en el servidor y muestra únicamente sus versiones cifradas.
     6.	decifrarCredenciales: Recupera las credenciales cifradas desde el servidor y las descifra usando la contraseña maestra correcta.
+### Integracion de Github
+    Se trabajo utilizaondo git y github.
 
+    Donde las actividades que se hizo:
+    -Clonar el repositorio
+    -La conexion de un entorno ya sea local con el repositorio
+
+    ### La participacion del Backend y del almacenamiento
+    Se hizo una preparacion del backend ya sea utilizando python e flask
+    -La contraseña maestra no se almacena
+    -El servidor solo recibe datos cifrados
+
+    Tecnologias relacionadas:
+    -Python
+    -Flask
+    -SQlite
