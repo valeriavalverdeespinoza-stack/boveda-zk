@@ -1,5 +1,5 @@
 // APP.JS - Lógica principal de la aplicación
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "http://172.238.205.129:5000";
 
 let usuarioActual = null;
 
